@@ -1,0 +1,17 @@
+[package]
+name = "main_crate"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = [
+    "activate_shader"
+]
+
+activate_shader = [
+    "dep:shader_crate"
+]
+
+[dependencies]
+shader_crate = { workspace = true, optional = true }
+bevy = { workspace = true, features = ["bevy_render", "bevy_pbr", "bevy_color", "bevy_asset"] }
