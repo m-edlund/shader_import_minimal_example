@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2" # Important! wgpu/Bevy needs this!
+
+members = [
+    "main_crate",
+    "shader_crate",
+]
+
+[workspace.dependencies]
+shader_crate = { path = "shader_crate" }
+
+bevy = { version = "0.14.2" }
